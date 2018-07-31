@@ -1,459 +1,4 @@
-// $(function(){
-// 	var maskPage = {
-// 		data:{
-// 			sex_id:null,
-// 			province_id:null,
-// 			city_id:null,
-// 			career_status:null,
-// 			career_type:null,
-// 			school_year_enter:null,
-// 			work_experience:null,
-// 			career_interest:[],
-// 			ca_status:null,
-// 		},
-// 		init:function(){
-// 			this.bind();
-// 			this.setProvince();
-// 			this.setEnrollment();
-// 		},
-// 		bind:function(){
-// 			$('.showmask-btn').on('click',this.firstSectionShow);
-// 			$('.close-btn').on('click',this.closePage);
-// 			$('#type-pre-btn').on('click',this.preFirstSectionShow);
-// 			$('body').on('click','#next-btn.active',this.secondSectionShow);
-// 			$('#user-sex-btn').on('click',this.userSexBtn);
-// 			$('.user-sex-list').on('click','.user-sex-item',this.userSexSelect);
-// 			$('#user-province-btn').on('click',this.userProvinceBtn);
-// 			$('.user-province-list').on('click','.user-province-item',this.userProvinceSelect);
-// 			$('#user-city-btn').on('click',this.userCityBtn);
-// 			$('.user-city-list').on('click','.user-city-item',this.userCitySelect);
-// 			$('#student-button-item').on('click',this.userStudentSelect);
-// 			$('#user-grade-btn').on('click',this.userGradeBtn);
-// 			$('.user-grade-list').on('click','.user-grade-item',this.userGradeSelect);
-// 			$('#user-enrollment-btn').on('click',this.userEnrollmentBtn);
-// 			$('.user-enrollment-list').on('click','.user-enrollment-item',this.userEnrollmentSelect);
-// 			$('#employee-button-item').on('click',this.userEmployeeSelect);
-// 			$('#user-industry-btn').on('click',this.userIndustryBtn);
-// 			$('.user-industry-list').on('click','.user-industry-item',this.userIndustrySelect);
-// 			$('#user-workingyear-btn').on('click',this.userWorkingyearBtn);
-// 			$('.user-workingyear-list').on('click','.user-workingyear-item',this.userWorkingyearSelect);
-// 			$('#unemployed-button-item').on('click',this.userUnemployedSelect);
-// 			$('.type-item').on('click',this.jobTypeSelct);
-// 			$('body').on('click','#type-next-btn.active',this.thirdStepSectionShow);
-// 			$('#level-pre-btn').on('click',this.preSecondSectionShow);
-// 			$('body').on('click','.level-select',this.userLevelSelect);
-// 			$('body').on('click','#level-apply-btn.active',this.bindingSectionShow);
-// 			$('#dynamic-code-send').on('click',this.dynamicCodeSend);
-// 			$('body').on('input','#dynamic-code',this.entryDynamicCode);
-// 			$('body').on('click','#binding-btn.active',this.bindingPhoneBtn);
-// 		},
-// 		firstSectionShow:function(){
-// 			console.log('ii');
-// 			$('.maskshield').css('display','block');
-// 			$('.step-1-section').css('display','block');
-// 		},
-// 		secondSectionShow:function(){
-// 			$('.step-1-section').css('display','none');
-// 			$('.step-2-section').css('display','block');
-// 		},
-// 		preFirstSectionShow:function(){
-// 			$('.step-1-section').css('display','block');
-// 			$('.step-2-section').css('display','none');
-// 		},
-// 		closePage:function(){
-// 			$(this).parent().css('display','none');
-// 			$('.maskshield').css('display','none')
-// 		},
-// 		userSexBtn:function(){
-// 			$('.user-sex-list').toggleClass('active');
-// 		},
-// 		userProvinceBtn:function(){
-// 			$('.user-province-list').toggleClass('active');
-// 		},
-// 		userCityBtn:function(){
-// 			$('.user-city-list').toggleClass('active');
-// 		},
-// 		userGradeBtn:function(){
-// 			$('.user-grade-list').toggleClass('active')
-// 		},
-// 		userEnrollmentBtn:function(){
-// 			$('.user-enrollment-list').toggleClass('active')
-// 		},
-// 		userIndustryBtn:function(){
-// 			$('.user-industry-list').toggleClass('active')
-// 		},
-// 		userWorkingyearBtn:function(){
-// 			$('.user-workingyear-list').toggleClass('active')
-// 		},
-// 		userSexSelect:function(){			
-// 			$('.user-sex-list').removeClass('active');			
-// 			var thisValue = $(this).data('value');
-// 			maskPage.data.sex_id = thisValue
-// 			console.log(thisValue);
-// 			$('#user-sex-btn').attr('data-value',thisValue);
-// 			$('#user-sex-btn').text(thisValue);
-// 		},
-// 		nextBtnAddActive:function(){
-// 			if(maskPage.data.career_status == 3){
-// 				$('#next-btn').addClass('active');
-// 			}else{
-// 				$('#next-btn').removeClass('active');
-// 			};
-// 		},
-// 		nextBtnAddActive_2:function(){
-// 			if(maskPage.data.career_type !== null && maskPage.data.school_year_enter !== null){
-// 				$('#next-btn').addClass('active');
-// 				console.log('777not')
-// 			}else if(maskPage.data.work_experience !== null && maskPage.data.career_type !== null){
-// 				$('#next-btn').addClass('active');
-// 				console.log('999bit')
-// 			}else{
-// 				$('#next-btn').removeClass('active');
-// 				('0000000')
-// 			}
-// 		},
-// 		userProvinceSelect:function(){
-// 			var thisValue = $(this).data('value');
-// 			var thisText = $(this).text();
-// 			$('#user-province-btn').attr('data-value',thisValue);
-// 			$('#user-province-btn').text(thisText);
-// 			var provinceIndex = $(this).index();
-// 			maskPage.data.province_id = thisValue;
-// 			let cityobj = data_area.child[provinceIndex]
-// 			maskPage.setCity(cityobj);
-// 			$('.user-city-list').addClass('active');
-// 			$('.user-province-list').removeClass('active');
-// 			$('#user-city-btn').attr('data-value','');
-// 			$('#user-city-btn').text('市');
 
-// 		},
-// 		userCitySelect:function(){
-// 			var thisText = $(this).text();
-// 			var thisValue = $(this).data('value');
-// 			maskPage.data.city_id = thisValue;
-// 			$('#user-city-btn').attr('data-value',thisValue);
-// 			$('#user-city-btn').text(thisText);
-// 			$('.user-city-list').removeClass('active')
-// 			// console.log(maskPage.data)
-// 		},
-// 		userStudentSelect:function(){
-// 			if(maskPage.data.province_id !== null && maskPage.data.city_id !== null && maskPage.data.sex_id !== null){
-// 				$(this).addClass('active');
-// 				if($('#student-button-item').hasClass('active')){
-// 					$(this).attr('data-value',"1");
-// 					maskPage.data.career_status = $(this).data('value');	
-// 					$('.student-info-item').addClass('active');
-// 					$('.employee-info-item').removeClass('active');
-// 					$('.check-box').addClass('active');
-// 					$('#employee-button-item').removeClass('active');
-// 					$('#unemployed-button-item').removeClass('active');
-// 					$('#user-industry-btn').attr('data-value','');
-// 					$('#user-industry-btn').text('您所从事的职业');
-// 					maskPage.data.career_type = null;
-// 					$('#user-workingyear-btn').attr('data-value','');
-// 					$('#user-workingyear-btn').text('工作年限:');
-// 					maskPage.data.work_experience = null;
-// 				}
-// 				maskPage.nextBtnAddActive();
-// 			} 	
-// 		},
-// 		userGradeSelect:function(){
-// 			var thisText = $(this).text();
-// 			var thisValue = $(this).data('value');
-// 			maskPage.data.career_type = thisValue;
-// 			$('#user-grade-btn').attr('data-value',thisValue);
-// 			$('#user-grade-btn').text(thisText);
-// 			$('.user-grade-list').removeClass('active');
-// 			maskPage.nextBtnAddActive_2();
-// 		},
-// 		userEnrollmentSelect:function(){
-// 			var thisText = $(this).text();
-// 			var thisValue = $(this).data('value');
-// 			maskPage.data.school_year_enter = thisValue;
-// 			$('#user-enrollment-btn').attr('data-value',thisValue);
-// 			$('#user-enrollment-btn').text(thisText);
-// 			$('.user-enrollment-list').removeClass('active');
-// 			maskPage.nextBtnAddActive_2();
-// 		},
-// 		userEmployeeSelect:function(){
-// 			if(maskPage.data.province_id !== null && maskPage.data.city_id !== null && maskPage.data.sex_id !== null){
-// 				$(this).addClass('active');
-// 				if($('#employee-button-item').hasClass('active')){
-// 					$(this).attr('data-value',"2");
-// 					maskPage.data.career_status = $(this).data('value');
-// 					$('.employee-info-item').addClass('active');
-// 					$('.student-info-item').removeClass('active');				
-// 					$('.check-box').addClass('active');
-// 					$('#student-button-item').removeClass('active');
-// 					$('#unemployed-button-item').removeClass('active');
-// 					$('#user-grade-btn').attr('data-value','');
-// 					$('#user-grade-btn').text('你所在的年级');
-// 					maskPage.data.career_type = null;
-// 					$('#user-enrollment-btn').attr('data-value','');
-// 					$('#user-enrollment-btn').text('入学年份:');
-// 					maskPage.data.school_year_enter = null;
-// 				}
-// 				maskPage.nextBtnAddActive();
-// 			}
-// 			console.log(maskPage.data)
-// 		},
-// 		userIndustrySelect:function(){
-// 			var thisText = $(this).text();
-// 			var thisValue = $(this).data('value');
-// 			if(maskPage.data.career_status == 2){
-// 				maskPage.data.career_type = thisValue;
-// 			}else{
-// 				maskPage.data.career_type = null;
-// 			}
-// 			$('#user-industry-btn').attr('data-value',thisValue);
-// 			$('#user-industry-btn').text(thisText);
-// 			$('.user-industry-list').removeClass('active');
-// 			maskPage.nextBtnAddActive_2();
-// 		},
-// 		userWorkingyearSelect:function(){
-// 			var thisText = $(this).text();
-// 			var thisValue = $(this).data('value');
-// 			maskPage.data.work_experience = thisValue;
-// 			$('#user-workingyear-btn').attr('data-value',thisValue);
-// 			$('#user-workingyear-btn').text(thisText);
-// 			$('.user-workingyear-list').removeClass('active');
-// 			maskPage.nextBtnAddActive_2();
-// 			console.log(maskPage.data)
-// 		},
-// 		userUnemployedSelect:function(){
-// 			if(maskPage.data.province_id !== null && maskPage.data.city_id !== null && maskPage.data.sex_id !== null){
-// 				$(this).addClass('active');
-// 				if($('#unemployed-button-item').hasClass('active')){
-// 					$(this).attr('data-value',"3");
-// 					maskPage.data.career_status = $(this).data('value');
-// 					maskPage.data.career_type = null;
-// 					maskPage.data.school_year_enter = null;
-// 					maskPage.data.work_experience = null,	
-// 					$('.employee-info-item').removeClass('active');
-// 					$('.student-info-item').removeClass('active');
-// 					$('#employee-button-item').removeClass('active');
-// 					$('#student-button-item').removeClass('active');
-// 				}
-// 				maskPage.nextBtnAddActive();
-// 			}
-// 		},
-// 		arrInterest:[],
-// 		InterestData:[{
-//             item_id: 114,
-//             name: 'Web 前端工程师'
-//         },{
-//             item_id: 115,
-//             name: 'Android 开发工程师'
-//         },{
-//             item_id: 116,
-//             name: 'iOS 开发工程师'
-//         },{
-//             item_id: 117,
-//             name: 'GO 语言工程师'
-//         },{
-//             item_id: 118,
-//             name: 'Python Web 工程师'
-//         },{
-//             item_id: 119,
-//             name: 'PHP 工程师'
-//         },{
-//             item_id: 120,
-//             name: 'Java Web 工程师'
-//         }],
-// 		jobTypeSelct:function(){
-// 			var interestActive = $(this).data('value')
-// 			if(maskPage.arrInterest.indexOf(interestActive )===-1){
-// 				if(maskPage.arrInterest.length < 3){
-// 					maskPage.arrInterest.push(interestActive);
-// 					$(this).addClass('active');
-// 				}
-// 			}else{
-// 				$(this).removeClass('active');
-// 				var i = maskPage.arrInterest.indexOf(interestActive);
-// 				maskPage.arrInterest.splice(i,1);							
-// 			}
-// 			if(maskPage.arrInterest.length ==0){
-// 				$('#type-next-btn').removeClass('active');
-// 			}else{
-// 				$('#type-next-btn').addClass('active')
-// 			}
-// 		},
-// 		thirdStepSectionShow:function(){
-// 			$('.step-3-section').css('display','block');
-// 			$('.step-2-section').css('display','none');	
-// 			maskPage.setInterestLevel();
-// 		},
-// 		preSecondSectionShow:function(){
-// 			$('.step-2-section').css('display','block');
-// 			$('.step-3-section').css('display','none');
-// 		},
-// 		setInterestLevel:function(){
-// 			let career_interest = maskPage.arrInterest;
-// 			let InterestData    = maskPage.InterestData;
-// 			console.log(InterestData,career_interest);
-// 			console.log(maskPage.data)
-// 			let html = '';
-// 			InterestData.forEach( i_data =>{
-// 				career_interest.forEach( c_data => {
-// 					if(i_data.item_id == c_data){
-// 						console.log(i_data);
-// 						let levelList = `
-// 						<div class="level-list">
-// 							<p class="list-title">${i_data.name}</p>
-// 							<ul class="item-level">
-// 								<li class="level-select" data-id="${i_data.item_id}" data-value="1">完全不了解<span></span></li>
-// 								<li class="level-select" data-id="${i_data.item_id}" data-value="2">有点了解<span></span></li>
-// 								<li class="level-select" data-id="${i_data.item_id}" data-value="3">熟悉<span></span></li>
-// 								<li class="level-select" data-id="${i_data.item_id}" data-value="4">精通<span></span></li>
-// 							</ul>
-// 						</div>`;
-// 						html += levelList;
-// 					}
-// 					console.log(html);
-// 					$('.level-list-container').html(html)	
-// 				})
-// 			})
-// 		},
-// 		bindingSectionShow:function(){
-// 			maskPage.setBindingData();
-// 			$('.binding-section').css('display','block');
-// 			$('.step-3-section').css('display','none');
-// 		},
-// 		setBindingData:function(){
-// 			let getImgCodeUrl = 'https://huodong.jikexueyuan.com/jike1024/verifyCode';
-//             var imgCode = getImgCodeUrl+ '?' + new Date().getTime();
-//             var setimgCode = `<img src="${imgCode}" alt="logo"`;
-//             $('.verify-pic').append(setimgCode);
-// 		},
-// 		dynamicCodeSend:function(){
-// 			var myreg = /^[1][3,4,5,7,8][0-9]{9}$/;
-// 		    var phone = $('#phone-number').val()
-// 		    var flag = myreg.test(phone)
-// 		    var myreg2 = /^\d{4}$/;
-// 			var code  = $('#verify-code').val();
-// 			var flag2 = myreg2.test(code);
-// 			if($('#phone-number').val()==""){
-// 				$('#phone-number').css('border','1px solid red');
-// 				$('.alert-number').text('不能为空');
-// 			}else{
-// 			    if(flag){
-// 			    	$('#phone-number').css('border','1px solid #e4e4e4');
-// 					$('.alert-number').text('')
-// 			    }else{
-// 			    	$('.alert-number').text('输入错误')
-// 			    }
-// 			};
-// 			if($('#verify-code').val()==""){
-// 				$('#verify-code').css('border','1px solid red');
-// 				$('.alert-code').text('不能为空');
-// 			}else{
-// 				if(flag2){
-// 					$('#verify-code').css('border','1px solid #e4e4e4');
-// 					$('.alert-code').text('');
-// 				}else{
-// 					$('.alert-code').text('输入错误');
-// 				}
-// 			};
-// 			if(flag&&flag2){
-// 				maskPage.countDown();
-// 			};
-// 		},
-// 		countDown:function(){
-// 			let count = 60;
-// 			var st = setInterval(()=>{
-// 				if (count > 1) {
-// 					count --;
-// 					console.log(count)
-// 					let dynamicCodeSendCount =  '已发送'+'' + '(' + count + ')';
-// 					$('#dynamic-code-send').text(dynamicCodeSendCount);
-// 					$('#dynamic-code-send').attr('disabled', true);
-// 				}else{
-// 					clearInterval(st);
-// 					$('#dynamic-code-send').text('获取');
-// 					$('#dynamic-code-send').attr('disabled', false);
-// 				}
-// 			},1000);
-			
-// 		},
-// 		entryDynamicCode:function(e){
-// 			if($(this).val()!==""){
-// 				$('#binding-btn').addClass('active')
-// 			}else{
-// 				$('#binding-btn').removeClass('active');
-// 			};
-// 		},
-// 		bindingPhoneBtn:function(){
-// 			$('.finish-section').css('display','block');
-// 			$('.binding-section').css('display','none');
-// 		},
-// 		setProvince:function(){
-// 			let html = '';
-// 			data_area.child.forEach(data => {
-// 				var id = data.id;
-// 				var name = data.name;
-// 				var appendOptions = `<li class="user-province-item" data-value="${id}">${name}</li>` 
-// 				html += appendOptions
-// 			})
-// 			$('.user-province-list').html(html);
-// 		},
-// 		setCity:function(objCity){
-// 			let html = '';
-// 			objCity.child.forEach( data =>{
-// 				let name = data.name;
-// 				let id = data.id;
-// 				var appendOptions = `<li class="user-city-item" data-value="${id}">${name}</li>` 
-// 				html += appendOptions;
-// 				console.log(html)
-// 			})
-// 			$('.user-city-list').html(html);
-// 		},
-// 		setEnrollment:function(){
-// 			var html = '';
-// 			var startdate = 1976;
-// 			var enddate = new Date().getUTCFullYear();
-// 			for(var i = enddate; i > startdate;i--){
-// 				var appendOptions = `<li class="user-enrollment-item" data-value="${i}">${i}</li>`
-// 				html += appendOptions;
-// 			}
-// 			$('.user-enrollment-list').html(html)
-// 		},
-// 		userLevelSelect:function(){
-// 			var thisId = $(this).data('id');
-// 			var thisValue = $(this).data('value');
-// 			var thisInterest = thisId +'-'+ thisValue;
-// 			var haskey = false;
-// 			var tmpIndex = null;
-// 			maskPage.data.career_interest.forEach((data,index)=>{
-// 				let i_key = data.split('-')[0];
-// 				if(i_key == thisId){
-// 					haskey = true;
-// 					tmpIndex = index;
-// 				};
-// 			})
-// 			if(!haskey){
-// 				maskPage.data.career_interest.push(thisInterest);
-// 				$(this).addClass('active')
-// 			}else{
-// 				if(maskPage.data.career_interest.indexOf(thisInterest)===-1){
-// 					maskPage.data.career_interest.splice(tmpIndex,1,thisInterest);
-// 					$(this).toggleClass('active');
-// 					$(this).siblings().removeClass('active')
-// 				}else{
-// 					var i = maskPage.data.career_interest.indexOf(thisInterest)
-// 					maskPage.data.career_interest.splice(i,1);
-// 					$(this).removeClass('active');
-// 				}	
-// 			}
-// 			console.log(maskPage.data.career_interest)
-// 			if(maskPage.data.career_interest.length == maskPage.arrInterest.length){
-// 				$('#level-apply-btn').addClass('active')
-// 			}else{
-// 				$('#level-apply-btn').removeClass('active')
-// 			}
-// 		},
-// 	}
-// 	maskPage.init();
-// })
 $(function(){
 	const maskPage = {
 		data:{
@@ -506,39 +51,14 @@ $(function(){
 			$('body').on('click','#binding-btn.active',this.showFifthTemplete);
 		},
 		showMask:function(){
-			let html = maskPage.createFirstHTML();
+			let html = `
+			<div class="mask-container">
+			</div>`
 		    $('body').append(html);
 		    maskPage.showFirstTemplete();
-		    maskPage.heightLightBtn();
 		},
 		closePage:function(){
 			$('.mask-container').remove();
-		},
-		createFirstHTML:function(){
-			let html = `
-			<div class="mask-container">
-				<div class="maskshield"></div>
-				<div class="step-1-section">
-			<div class="close-btn">
-				<img src="./images/close.png" alt="logo">
-			</div>	
-			<div class="head-box">
-				<div class="title-container">
-					<p class="title">成为认证学员</p>
-					<p class="title-desc">成为极客学院认证学员，点亮专属身份标识，<span>免费观看</span>全站 80% 以上会员课程。</p>
-				</div>
-				<div class="step-container">
-					第 1 步<span class="total-step"> / 共 3 步</span>
-				</div>
-			</div>
-			<div class="content-box">
-			</div>
-			<div class="check-box">
-				<button class="next-btn" id="next-btn">下一步</button>
-			</div>
-				</div>
-			</div>`
-			return html;
 		},
 		arrInterest:[],
 		workingYearData:[{
@@ -598,6 +118,20 @@ $(function(){
 			let p_html = "";
 			let c_html = "";
 			let enrollment_html = maskPage.setEnrollment();
+
+			console.log(maskPage.data.career_type)
+			if(careerType !==null && schoolYear !== null){
+				gradeText = careerType;
+				enrollmentText = enrollmentText
+			}
+			if(careerType !==null && workExperience !== null){
+				industryText = careerType;
+				maskPage.workingYearData.forEach(w_data=>{
+					if(workExperience == w_data.id){
+						workExperienceText = w_data.name;
+					}
+				})	
+			}
 			data_area.child.forEach((p_data,index) => {
 				let p_id = p_data.id;
 				let p_name = p_data.name;
@@ -617,117 +151,127 @@ $(function(){
 					cityText = c_name
 				}
 			});
+			let html = `
+				<div class="maskshield"></div>
+				<div class="step-1-section">
+					<div class="close-btn">
+						<img src="./images/close.png" alt="logo">
+					</div>	
+					<div class="head-box">
+						<div class="title-container">
+							<p class="title">成为认证学员</p>
+							<p class="title-desc">成为极客学院认证学员，点亮专属身份标识，<span>免费观看</span>全站 80% 以上会员课程。</p>
+						</div>
+						<div class="step-container">
+							第 1 步<span class="total-step"> / 共 3 步</span>
+						</div>
+					</div>
+					<div class="content-box">
+						<div class="list-1">
+							<div class="user-avatar">
+								<img src="./images/head.png" alt="logo">
+							</div>
+							<p class="user-name">${name}</p>
+						</div>
+						<div class="list-2">
+							<div class="user-info-item">
+								<div class="user-sex-item">
+									<span class="button-label">性别：</span>
+									<div class="user-sex-select">
+										<button id="user-sex-btn" class="user-sex-btn" data-value="${sex}">${sex}</button>
+										<ul class="user-sex-list">
+											<li class="user-sex-item" data-value="男">男</li>
+											<li class="user-sex-item" data-value="女">女</li>
+										</ul>
+									</div>
+								</div>
+								<div class="user-site-item">
+									<span class="button-label">现居住地：</span>
+									<div class="user-province-select">
+										<button class="user-province-btn" id="user-province-btn" data-value="${province}">${provinceText}</button>
+										<ul class="user-province-list">
+											${p_html}
+										</ul>
+									</div>
+									<div class="user-city-select">
+										<button class="user-city-btn" id="user-city-btn" data-value="${city}">${cityText}</button>
+										<ul class="user-city-list">
+											${c_html}
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="user-situation-item">
+								<span class="button-label">您的当前状态：</span>
+								<div class="user-situation-select">
+									<div class="user-student">
+										<div class="${careerStatus==1 ? 'button-item active' : 'button-item'}" id="student-button-item" data-value="${careerStatus}">学生</div>
+										<div class="${careerStatus==1&&careerType !== null && schoolYear !== null? 'student-info-item active' : 'student-info-item'}">
+											<div class="user-grade-select">
+												<button class="user-grade-btn" id="user-grade-btn" data-value="${careerType}">${gradeText}</button>
+												<ul class="user-grade-list">
+													<li class="user-grade-item" data-value="高中及以下">高中及以下</li>
+													<li class="user-grade-item" data-value="专科">专科</li>
+													<li class="user-grade-item" data-value="大学本科">大学本科</li>
+													<li class="user-grade-item" data-value="研究生及以上">研究生及以上</li>
+												</ul>
+											</div>
+											<div class="user-enrollment-select">
+												<button class="user-enrollment-btn" id="user-enrollment-btn" data-value="${schoolYear}">${schoolYear == null? enrollmentText: schoolYear}</button>
+												<ul class="user-enrollment-list">
+													${enrollment_html}
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="user-employee">
+										<div class="${careerStatus==2 ?'button-item active' : 'button-item'}" id="employee-button-item" data-value="${careerStatus}">在职</div>
+										<div class="${careerStatus==2 && careerType !== null && workExperience !== null? 'employee-info-item active' : 'employee-info-item'}">
+											<div class="user-industry-select">
+												<button class="user-industry-btn" id="user-industry-btn" data-value="${careerType}">${industryText}</button>
+												<ul class="user-industry-list">
+													<li class="user-industry-item" data-value="技术">技术</li>
+													<li class="user-industry-item" data-value="产品">产品</li>
+													<li class="user-industry-item" data-value="设计">设计</li>
+													<li class="user-industry-item" data-value="测试">测试</li>
+													<li class="user-industry-item" data-value="运营">运营</li>
+													<li class="user-industry-item" data-value="其他">其他</li>
+												</ul>
+											</div>
+											<div class="user-workingyear-select">
+												<button class="user-workingyear-btn" id="user-workingyear-btn" data-value="${workExperience}">${workExperienceText}</button>
+												<ul class="user-workingyear-list">
+													<li class="user-workingyear-item" data-value="1">1年以下</li>
+													<li class="user-workingyear-item" data-value="2">1-2 年</li>
+													<li class="user-workingyear-item" data-value="3">3-5年</li>
+													<li class="user-workingyear-item" data-value="4">6-10年</li>
+													<li class="user-workingyear-item" data-value="5">10年以上</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="user-unemployed">
+										<div class="${careerStatus==3 ? 'button-item active' : 'button-item'} " id="unemployed-button-item" data-value="${careerStatus}">待业</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="check-box">
+						<button class="next-btn" id="next-btn">下一步</button>
+					</div>
+				</div>
+				`
+			$('.mask-container').html(html);
+
 			if(careerType !== null && schoolYear !== null){
-				gradeText = careerType;
-				enrollmentText = schoolYear;
-				console.log('da')
 				$('.check-box').addClass('active');
 			};
-			if(careerType !== null && workExperience !== null){
-				industryText = careerType;
-				maskPage.workingYearData.forEach(wy_data =>{
-					var wy_id = wy_data.id;
-					var wy_name = wy_data.name;
-					console.log(workExperience)
-					if(workExperience == wy_id){
-						workExperienceText = wy_name;
-						console.log(workExperienceText)
-					} 
-				})
-				$('.check-box').addClass('active');				 
-			}		
-			let html = `
-				<div class="list-1">
-					<div class="user-avatar">
-						<img src="./images/head.png" alt="logo">
-					</div>
-					<p class="user-name">${name}</p>
-				</div>
-				<div class="list-2">
-					<div class="user-info-item">
-						<div class="user-sex-item">
-							<span class="button-label">性别：</span>
-							<div class="user-sex-select">
-								<button id="user-sex-btn" class="user-sex-btn" data-value="${sex}">${sex}</button>
-								<ul class="user-sex-list">
-									<li class="user-sex-item" data-value="男">男</li>
-									<li class="user-sex-item" data-value="女">女</li>
-								</ul>
-							</div>
-						</div>
-						<div class="user-site-item">
-							<span class="button-label">现居住地：</span>
-							<div class="user-province-select">
-								<button class="user-province-btn" id="user-province-btn" data-value="${province}">${provinceText}</button>
-								<ul class="user-province-list">
-									${p_html}
-								</ul>
-							</div>
-							<div class="user-city-select">
-								<button class="user-city-btn" id="user-city-btn" data-value="${city}">${cityText}</button>
-								<ul class="user-city-list">
-									${c_html}
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="user-situation-item">
-						<span class="button-label">您的当前状态：</span>
-						<div class="user-situation-select">
-							<div class="user-student">
-								<div class="${careerStatus==1 ? 'button-item active' : 'button-item'}" id="student-button-item" data-value="${careerStatus}">学生</div>
-								<div class="${careerStatus==1&&careerType !== null && schoolYear !== null? 'student-info-item active' : 'student-info-item'}">
-									<div class="user-grade-select">
-										<button class="user-grade-btn" id="user-grade-btn" data-value="${careerType}">${gradeText}</button>
-										<ul class="user-grade-list">
-											<li class="user-grade-item" data-value="高中及以下">高中及以下</li>
-											<li class="user-grade-item" data-value="专科">专科</li>
-											<li class="user-grade-item" data-value="大学本科">大学本科</li>
-											<li class="user-grade-item" data-value="研究生及以上">研究生及以上</li>
-										</ul>
-									</div>
-									<div class="user-enrollment-select">
-										<button class="user-enrollment-btn" id="user-enrollment-btn" data-value="${schoolYear}">${enrollmentText}</button>
-										<ul class="user-enrollment-list">
-											${enrollment_html}
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="user-employee">
-								<div class="${careerStatus==2 ?'button-item active' : 'button-item'}" id="employee-button-item" data-value="${careerStatus}">在职</div>
-								<div class="${careerStatus==2 && careerType !== null && workExperience !== null? 'employee-info-item active' : 'employee-info-item'}">
-									<div class="user-industry-select">
-										<button class="user-industry-btn" id="user-industry-btn" data-value="${careerType}">${industryText}</button>
-										<ul class="user-industry-list">
-											<li class="user-industry-item" data-value="技术">技术</li>
-											<li class="user-industry-item" data-value="产品">产品</li>
-											<li class="user-industry-item" data-value="设计">设计</li>
-											<li class="user-industry-item" data-value="测试">测试</li>
-											<li class="user-industry-item" data-value="运营">运营</li>
-											<li class="user-industry-item" data-value="其他">其他</li>
-										</ul>
-									</div>
-									<div class="user-workingyear-select">
-										<button class="user-workingyear-btn" id="user-workingyear-btn" data-value="${workExperience}">${workExperienceText}</button>
-										<ul class="user-workingyear-list">
-											<li class="user-workingyear-item" data-value="1">1年以下</li>
-											<li class="user-workingyear-item" data-value="2">1-2 年</li>
-											<li class="user-workingyear-item" data-value="3">3-5年</li>
-											<li class="user-workingyear-item" data-value="4">6-10年</li>
-											<li class="user-workingyear-item" data-value="5">10年以上</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="user-unemployed">
-								<div class="${careerStatus==3 ? 'button-item active' : 'button-item'} " id="unemployed-button-item" data-value="${careerStatus}">待业</div>
-							</div>
-						</div>
-					</div>
-				</div>`
-			$('.content-box').html(html);
-			return html;
+			
+			if(careerType !==null && workExperience !== null){
+				$('.check-box').addClass('active');		
+			}
+			maskPage.heightLightBtn();
 		},
 		setEnrollment:function(){
 			var enrollment_html = '';
@@ -968,7 +512,7 @@ $(function(){
 			}
 		},
 		preFirstSectionShow:function(){
-			maskPage.showMask();
+			maskPage.showFirstTemplete();
 		},
 		showThirdTemplete:function(){
 			var setInterestLevel = maskPage.setInterestLevel();
@@ -1102,23 +646,21 @@ $(function(){
 				}	
 			};
 			maskPage.showLevelBtn();
+
 			console.log(maskPage.data.career_interest)
 
 		},
 		showLevelBtn:function(){
+			var arrLevel = []
 			maskPage.data.career_interest.forEach((data,index)=>{
 				let l_key = data.split('-')[1];
-				let haskey = false;
-				if(l_key == 0){
-					haskey = true;
-				};
-				if(haskey){
-					console.log('removeclass')
+				arrLevel.push(Number(l_key))
+				console.log(arrLevel)
+				if(arrLevel.indexOf(0)>=0){
 					$('#level-apply-btn').removeClass('active')
 				}else{
-					console.log('addclass')
 					$('#level-apply-btn').addClass('active')
-				}
+				};
 			})
 		},
 		interestLevelLineOver:function(){
