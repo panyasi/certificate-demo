@@ -320,6 +320,9 @@ body {
   margin: 0;
   height: 100%;
 }
+.showmask-btn {
+  cursor: pointer;
+}
 .button-label {
   display: inline-block;
   vertical-align: top;
@@ -338,6 +341,7 @@ body {
   text-align: center;
   color: #333333;
   font-size: 12px;
+  cursor: pointer;
 }
 .button-item.active {
   border: 1px solid #35b558;
@@ -348,6 +352,7 @@ body {
   right: 10px;
   width: 16px;
   height: 16px;
+  cursor: pointer;
 }
 .close-btn img {
   width: 100%;
@@ -506,7 +511,7 @@ body {
   position: relative;
   display: inline-block;
 }
-.mask-container .step-1-section .content-box .list-2 .user-info-item .user-sex-item .user-sex-select .user-sex-btn {
+.mask-container .step-1-section .content-box .list-2 .user-info-item .user-sex-item .user-sex-select .user-basic-btn {
   position: relative;
   width: 70px;
   height: 30px;
@@ -517,8 +522,9 @@ body {
   text-align: left;
   font-size: 12px;
   color: #333333;
+  cursor: pointer;
 }
-.mask-container .step-1-section .content-box .list-2 .user-info-item .user-sex-item .user-sex-select .user-sex-btn:before {
+.mask-container .step-1-section .content-box .list-2 .user-info-item .user-sex-item .user-sex-select .user-basic-btn:before {
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
@@ -529,7 +535,7 @@ body {
   border-radius: 3px;
   background: #e4e4e4;
 }
-.mask-container .step-1-section .content-box .list-2 .user-info-item .user-sex-item .user-sex-select .user-sex-btn:after {
+.mask-container .step-1-section .content-box .list-2 .user-info-item .user-sex-item .user-sex-select .user-basic-btn:after {
   position: absolute;
   top: 50%;
   left: 49px;
@@ -552,6 +558,7 @@ body {
   border-right: 1px solid #e4e4e4;
   overflow: hidden;
   transition: all .2s ease;
+  cursor: pointer;
 }
 .mask-container .step-1-section .content-box .list-2 .user-info-item .user-sex-item .user-sex-select .user-sex-list .user-sex-item {
   height: 30px;
@@ -570,7 +577,7 @@ body {
   position: relative;
   display: inline-block;
 }
-.mask-container .step-1-section .content-box .list-2 .user-info-item .user-site-item .user-province-select .user-province-btn {
+.mask-container .step-1-section .content-box .list-2 .user-info-item .user-site-item .user-province-select .user-basic-btn {
   position: relative;
   width: 90px;
   height: 30px;
@@ -582,8 +589,9 @@ body {
   text-align: left;
   font-size: 12px;
   color: #333333;
+  cursor: pointer;
 }
-.mask-container .step-1-section .content-box .list-2 .user-info-item .user-site-item .user-province-select .user-province-btn:before {
+.mask-container .step-1-section .content-box .list-2 .user-info-item .user-site-item .user-province-select .user-basic-btn:before {
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
@@ -594,7 +602,7 @@ body {
   border-radius: 3px;
   background: #e4e4e4;
 }
-.mask-container .step-1-section .content-box .list-2 .user-info-item .user-site-item .user-province-select .user-province-btn:after {
+.mask-container .step-1-section .content-box .list-2 .user-info-item .user-site-item .user-province-select .user-basic-btn:after {
   position: absolute;
   top: 50%;
   left: 69px;
@@ -618,6 +626,7 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   transition: all .2s ease;
+  cursor: pointer;
   z-index: 3;
 }
 .mask-container .step-1-section .content-box .list-2 .user-info-item .user-site-item .user-province-select .user-province-list::-webkit-scrollbar {
@@ -638,7 +647,7 @@ body {
   display: inline-block;
   font-size: 0;
 }
-.mask-container .step-1-section .content-box .list-2 .user-info-item .user-site-item .user-city-select .user-city-btn {
+.mask-container .step-1-section .content-box .list-2 .user-info-item .user-site-item .user-city-select .user-basic-btn {
   position: relative;
   width: 90px;
   height: 30px;
@@ -649,8 +658,9 @@ body {
   text-align: left;
   font-size: 12px;
   color: #333333;
+  cursor: pointer;
 }
-.mask-container .step-1-section .content-box .list-2 .user-info-item .user-site-item .user-city-select .user-city-btn:before {
+.mask-container .step-1-section .content-box .list-2 .user-info-item .user-site-item .user-city-select .user-basic-btn:before {
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
@@ -661,7 +671,7 @@ body {
   border-radius: 3px;
   background: #e4e4e4;
 }
-.mask-container .step-1-section .content-box .list-2 .user-info-item .user-site-item .user-city-select .user-city-btn:after {
+.mask-container .step-1-section .content-box .list-2 .user-info-item .user-site-item .user-city-select .user-basic-btn:after {
   position: absolute;
   top: 50%;
   left: 69px;
@@ -685,6 +695,7 @@ body {
   transition: all .2s ease;
   overflow-y: scroll;
   overflow-x: hidden;
+  cursor: pointer;
 }
 .mask-container .step-1-section .content-box .list-2 .user-info-item .user-site-item .user-city-select .user-city-list::-webkit-scrollbar {
   width: 0 !important;
@@ -699,22 +710,23 @@ body {
 .mask-container .step-1-section .content-box .list-2 .user-info-item .user-site-item .user-city-select .user-city-list.active {
   height: 240px;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select {
+.mask-container .step-1-section .content-box .list-2 .user-career-item .user-career-select {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-student .student-info-item {
-  position: absolute;
-  margin-top: 20px;
+.mask-container .step-1-section .content-box .list-2 .user-situation-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
   font-size: 0;
-  display: none;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-student .student-info-item .user-grade-select {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-grade-select {
+  display: none;
   position: relative;
   margin-right: 40px;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-student .student-info-item .user-grade-select .user-grade-btn {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-grade-select .user-basic-btn {
   position: relative;
   width: 130px;
   height: 30px;
@@ -725,8 +737,9 @@ body {
   text-align: left;
   font-size: 12px;
   color: #333333;
+  cursor: pointer;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-student .student-info-item .user-grade-select .user-grade-btn:before {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-grade-select .user-basic-btn:before {
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
@@ -737,7 +750,7 @@ body {
   border-radius: 3px;
   background: #e4e4e4;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-student .student-info-item .user-grade-select .user-grade-btn:after {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-grade-select .user-basic-btn:after {
   position: absolute;
   top: 50%;
   left: 110px;
@@ -749,7 +762,7 @@ body {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-student .student-info-item .user-grade-select .user-grade-list {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-grade-select .user-grade-list {
   position: absolute;
   width: 130px;
   top: 100%;
@@ -760,21 +773,23 @@ body {
   border-right: 1px solid #e4e4e4;
   overflow: hidden;
   transition: all .2s ease;
+  cursor: pointer;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-student .student-info-item .user-grade-select .user-grade-list .user-grade-item {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-grade-select .user-grade-list .user-grade-item {
   height: 30px;
   line-height: 30px;
   font-size: 14px;
   border-bottom: 1px solid #e4e4e4;
   text-align: center;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-student .student-info-item .user-grade-select .user-grade-list.active {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-grade-select .user-grade-list.active {
   height: auto;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-student .student-info-item .user-enrollment-select {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-enrollment-select {
+  display: none;
   position: relative;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-student .student-info-item .user-enrollment-select .user-enrollment-btn {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-enrollment-select .user-basic-btn {
   position: relative;
   width: 130px;
   height: 30px;
@@ -785,8 +800,9 @@ body {
   text-align: left;
   font-size: 12px;
   color: #333333;
+  cursor: pointer;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-student .student-info-item .user-enrollment-select .user-enrollment-btn:before {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-enrollment-select .user-basic-btn:before {
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
@@ -797,7 +813,7 @@ body {
   border-radius: 3px;
   background: #e4e4e4;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-student .student-info-item .user-enrollment-select .user-enrollment-btn:after {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-enrollment-select .user-basic-btn:after {
   position: absolute;
   top: 50%;
   left: 110px;
@@ -809,7 +825,7 @@ body {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-student .student-info-item .user-enrollment-select .user-enrollment-list {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-enrollment-select .user-enrollment-list {
   position: absolute;
   width: 130px;
   top: 100%;
@@ -822,35 +838,27 @@ body {
   transition: all .2s ease;
   overflow-y: scroll;
   overflow-x: hidden;
+  cursor: pointer;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-student .student-info-item .user-enrollment-select .user-enrollment-list::-webkit-scrollbar {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-enrollment-select .user-enrollment-list::-webkit-scrollbar {
   width: 0 !important;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-student .student-info-item .user-enrollment-select .user-enrollment-list .user-enrollment-item {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-enrollment-select .user-enrollment-list .user-enrollment-item {
   height: 30px;
   line-height: 30px;
   font-size: 14px;
   border-bottom: 1px solid #e4e4e4;
   text-align: center;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-student .student-info-item .user-enrollment-select .user-enrollment-list.active {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-enrollment-select .user-enrollment-list.active {
   height: 150px;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-student .student-info-item.active {
-  display: flex;
-}
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-employee .employee-info-item {
-  position: absolute;
-  left: 210px;
-  margin-top: 20px;
-  font-size: 0;
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-industry-select {
   display: none;
-}
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-employee .employee-info-item .user-industry-select {
   position: relative;
   margin-right: 40px;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-employee .employee-info-item .user-industry-select .user-industry-btn {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-industry-select .user-basic-btn {
   position: relative;
   width: 130px;
   height: 30px;
@@ -861,8 +869,9 @@ body {
   text-align: left;
   font-size: 12px;
   color: #333333;
+  cursor: pointer;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-employee .employee-info-item .user-industry-select .user-industry-btn:before {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-industry-select .user-basic-btn:before {
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
@@ -873,7 +882,7 @@ body {
   border-radius: 3px;
   background: #e4e4e4;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-employee .employee-info-item .user-industry-select .user-industry-btn:after {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-industry-select .user-basic-btn:after {
   position: absolute;
   top: 50%;
   left: 110px;
@@ -885,7 +894,7 @@ body {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-employee .employee-info-item .user-industry-select .user-industry-list {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-industry-select .user-industry-list {
   position: absolute;
   width: 130px;
   top: 100%;
@@ -896,21 +905,23 @@ body {
   border-right: 1px solid #e4e4e4;
   overflow: hidden;
   transition: all .2s ease;
+  cursor: pointer;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-employee .employee-info-item .user-industry-select .user-industry-list .user-industry-item {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-industry-select .user-industry-list .user-industry-item {
   height: 30px;
   line-height: 30px;
   font-size: 14px;
   border-bottom: 1px solid #e4e4e4;
   text-align: center;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-employee .employee-info-item .user-industry-select .user-industry-list.active {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-industry-select .user-industry-list.active {
   height: auto;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-employee .employee-info-item .user-workingyear-select {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-workingyear-select {
+  display: none;
   position: relative;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-employee .employee-info-item .user-workingyear-select .user-workingyear-btn {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-workingyear-select .user-basic-btn {
   position: relative;
   width: 130px;
   height: 30px;
@@ -921,8 +932,9 @@ body {
   text-align: left;
   font-size: 12px;
   color: #333333;
+  cursor: pointer;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-employee .employee-info-item .user-workingyear-select .user-workingyear-btn:before {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-workingyear-select .user-basic-btn:before {
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
@@ -933,7 +945,7 @@ body {
   border-radius: 3px;
   background: #e4e4e4;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-employee .employee-info-item .user-workingyear-select .user-workingyear-btn:after {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-workingyear-select .user-basic-btn:after {
   position: absolute;
   top: 50%;
   left: 110px;
@@ -945,7 +957,7 @@ body {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-employee .employee-info-item .user-workingyear-select .user-workingyear-list {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-workingyear-select .user-workingyear-list {
   position: absolute;
   width: 130px;
   top: 100%;
@@ -956,22 +968,20 @@ body {
   border-right: 1px solid #e4e4e4;
   overflow: hidden;
   transition: all .2s ease;
+  cursor: pointer;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-employee .employee-info-item .user-workingyear-select .user-workingyear-list .user-workingyear-item {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-workingyear-select .user-workingyear-list .user-workingyear-item {
   height: 30px;
   line-height: 30px;
   font-size: 14px;
   border-bottom: 1px solid #e4e4e4;
   text-align: center;
 }
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-employee .employee-info-item .user-workingyear-select .user-workingyear-list.active {
+.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-workingyear-select .user-workingyear-list.active {
   height: auto;
-}
-.mask-container .step-1-section .content-box .list-2 .user-situation-item .user-situation-select .user-employee .employee-info-item.active {
-  display: flex;
 }
 .mask-container .step-1-section .check-box {
-  margin-top: 50px;
+  margin-top: 60px;
   text-align: center;
 }
 .mask-container .step-1-section .check-box .next-btn {
@@ -984,13 +994,11 @@ body {
   line-height: 40px;
   text-align: center;
   border: 1px solid #cccccc;
+  cursor: pointer;
 }
 .mask-container .step-1-section .check-box .next-btn.active {
   background: #35b558;
   border: 1px solid #35b558;
-}
-.mask-container .step-1-section .check-box.active {
-  margin-top: 110px;
 }
 .mask-container .step-2-section {
   z-index: 3;
@@ -1032,6 +1040,7 @@ body {
   color: #333333;
   text-align: center;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .mask-container .step-2-section .content-box .type-list .type-item:nth-child(n+4) {
   margin-bottom: 0;
@@ -1066,6 +1075,7 @@ body {
   font-size: 15px;
   border: 1px solid #35b558;
   text-align: center;
+  cursor: pointer;
 }
 .mask-container .step-2-section .check-box .type-next-btn {
   width: 160px;
@@ -1076,6 +1086,7 @@ body {
   font-size: 15px;
   border: 1px solid #cccccc;
   text-align: center;
+  cursor: pointer;
 }
 .mask-container .step-2-section .check-box .type-next-btn.active {
   background: #35b558;
@@ -1141,6 +1152,7 @@ body {
   border-radius: 3px;
   color: #333333;
   border: 1px solid #e4e4e4;
+  cursor: pointer;
 }
 .mask-container .step-3-section .content-box .level-list-container .level-list .item-level li:hover {
   border: 1px solid #bbb;
@@ -1194,6 +1206,7 @@ body {
   font-size: 15px;
   border: 1px solid #35b558;
   text-align: center;
+  cursor: pointer;
 }
 .mask-container .step-3-section .check-box .level-apply-btn {
   width: 160px;
@@ -1204,6 +1217,7 @@ body {
   font-size: 15px;
   border: 1px solid #cccccc;
   text-align: center;
+  cursor: pointer;
 }
 .mask-container .step-3-section .check-box .level-apply-btn.active {
   background: #35b558;
@@ -1333,6 +1347,7 @@ body {
   border: 1px solid #cccccc;
   line-height: 40px;
   text-align: center;
+  cursor: pointer;
 }
 .mask-container .binding-section .check-box .binding-btn.active {
   background: #35b558;

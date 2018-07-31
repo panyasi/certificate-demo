@@ -4,7 +4,9 @@ body{
 	margin:0;
   height:100%;
 }
-
+.showmask-btn{
+	cursor: pointer;
+}
 .button-label{
 	display: inline-block;
 	vertical-align: top;
@@ -23,6 +25,7 @@ body{
 	text-align: center;
 	color: #333333;
 	font-size: 12px;
+	cursor: pointer;
 	&.active{
 		border: 1px solid #35b558;
 	}
@@ -33,6 +36,7 @@ body{
 	right: 10px;
 	width: 16px;
 	height: 16px;
+	cursor: pointer;
 	img{
 		width: 100%;
 		height: 100%;
@@ -191,7 +195,7 @@ body{
 						.user-sex-select{
 							position: relative;
 							display: inline-block;
-							.user-sex-btn{
+							.user-basic-btn{
 								position: relative;
 								width: 70px;
 								height: 30px;
@@ -202,6 +206,7 @@ body{
 								text-align: left;
 								font-size: 12px;
 								color: #333333;
+								cursor: pointer;
 								&:before{
 									position: absolute;
 									transform: translateY(-50%);
@@ -237,6 +242,7 @@ body{
 								border-right: 1px solid #e4e4e4;
 								overflow: hidden;
 								transition: all .2s ease;
+								cursor: pointer;
 								.user-sex-item{
 									height: 30px;
 									line-height: 30px;
@@ -255,7 +261,7 @@ body{
 						.user-province-select{
 							position: relative;
 							display: inline-block;
-							.user-province-btn{
+							.user-basic-btn{
 								position: relative;
 								width: 90px;
 								height: 30px;
@@ -267,6 +273,7 @@ body{
 								text-align: left;
 								font-size: 12px;
 								color: #333333;
+								cursor: pointer;
 								&:before{
 									position: absolute;
 									transform: translateY(-50%);
@@ -303,6 +310,7 @@ body{
 								overflow-y: scroll;
 								overflow-x: hidden;
 								transition: all .2s ease;
+								cursor: pointer;
 								&::-webkit-scrollbar{
 									width: 0 !important
 								}
@@ -323,7 +331,7 @@ body{
 							position: relative;
 							display: inline-block;
 							font-size: 0;
-							.user-city-btn{
+							.user-basic-btn{
 								position: relative;
 								width: 90px;
 								height: 30px;
@@ -334,6 +342,7 @@ body{
 								text-align: left;
 								font-size: 12px;
 								color: #333333;
+								cursor: pointer;
 								&:before{
 									position: absolute;
 									transform: translateY(-50%);
@@ -370,6 +379,7 @@ body{
 								transition: all .2s ease;
 								overflow-y: scroll;
 								overflow-x: hidden;
+								cursor: pointer;
 								&::-webkit-scrollbar{
 									width: 0 !important
 								}								
@@ -387,289 +397,283 @@ body{
 						}
 					}
 				}
-				.user-situation-item{
-					.user-situation-select{
+				.user-career-item{
+					.user-career-select{
 						display: flex;
 						justify-content: space-between;
 						margin-top: 20px;
-						.user-student{
-							.student-info-item{
+					}
+				}
+				.user-situation-item{
+					display: flex;
+					flex-wrap: wrap;
+					margin-top: 30px;
+					font-size: 0;
+					.user-grade-select{
+						display: none;
+						position: relative;
+						margin-right: 40px;
+						.user-basic-btn{
+							position: relative;
+							width: 130px;
+							height: 30px;
+							border: 1px solid #e4e4e4;
+							outline: none;
+							border-radius: 3px;
+							padding-left: 10px;
+							text-align: left;
+							font-size: 12px;
+							color: #333333;
+							cursor: pointer;
+							&:before{
 								position: absolute;
-								// display: flex;
-								margin-top: 20px;
-								font-size: 0;
-								display: none;
-								.user-grade-select{
-									position: relative;
-									margin-right: 40px;
-									.user-grade-btn{
-										position: relative;
-										width: 130px;
-										height: 30px;
-										border: 1px solid #e4e4e4;
-										outline: none;
-										border-radius: 3px;
-										padding-left: 10px;
-										text-align: left;
-										font-size: 12px;
-										color: #333333;
-										&:before{
-											position: absolute;
-											transform: translateY(-50%);
-											top: 50%;
-											left: 105px;
-											content: '';
-											width: 20px;
-											height: 20px;
-											border-radius: 3px;
-											background: #e4e4e4;
-										}
-										&:after{
-											position: absolute;
-											top: 50%;
-											left: 110px;
-											transform: translateY(-50%);
-											content: '';
-											width: 0;
-											height: 0;
-											border-top: 6px solid #333333;
-											border-left: 5px solid transparent;
-											border-right: 5px solid transparent;
-										}
-									}
-									.user-grade-list{
-										position: absolute;
-										width: 130px;
-										top: 100%;
-										height: 0;
-										background: #eff3f6;
-										list-style: none;
-										border-left: 1px solid #e4e4e4;
-										border-right: 1px solid #e4e4e4;
-										overflow: hidden;
-										transition: all .2s ease;
-										.user-grade-item{
-											height: 30px;
-											line-height: 30px;
-											font-size: 14px;
-											border-bottom: 1px solid #e4e4e4;
-											text-align: center;
-										}
-										&.active{
-											height: auto;
-										}
-									}
-								}
-								.user-enrollment-select{
-									position: relative;
-									.user-enrollment-btn{
-										position: relative;
-										width: 130px;
-										height: 30px;
-										border: 1px solid #e4e4e4;
-										outline: none;
-										border-radius: 3px;
-										padding-left: 10px;
-										text-align: left;
-										font-size: 12px;
-										color: #333333;
-										&:before{
-											position: absolute;
-											transform: translateY(-50%);
-											top: 50%;
-											left: 105px;
-											content: '';
-											width: 20px;
-											height: 20px;
-											border-radius: 3px;
-											background: #e4e4e4;
-										}
-										&:after{
-											position: absolute;
-											top: 50%;
-											left: 110px;
-											transform: translateY(-50%);
-											content: '';
-											width: 0;
-											height: 0;
-											border-top: 6px solid #333333;
-											border-left: 5px solid transparent;
-											border-right: 5px solid transparent;
-										}								    
-									}
-									.user-enrollment-list{
-										position: absolute;
-										width: 130px;
-										top: 100%;
-										height: 0;
-										background: #eff3f6;
-										list-style: none;
-										border-left: 1px solid #e4e4e4;
-										border-right: 1px solid #e4e4e4;
-										overflow: hidden;
-										transition: all .2s ease;
-										overflow-y: scroll;
-										overflow-x: hidden;
-										&::-webkit-scrollbar{
-											width: 0 !important
-										}
-										.user-enrollment-item{
-											height: 30px;
-											line-height: 30px;
-											font-size: 14px;
-											border-bottom: 1px solid #e4e4e4;
-											text-align: center;
-										}
-										&.active{
-											height: 150px;
-										}
-									}
-								}
-								&.active{
-									display: flex;
-								}
+								transform: translateY(-50%);
+								top: 50%;
+								left: 105px;
+								content: '';
+								width: 20px;
+								height: 20px;
+								border-radius: 3px;
+								background: #e4e4e4;
+							}
+							&:after{
+								position: absolute;
+								top: 50%;
+								left: 110px;
+								transform: translateY(-50%);
+								content: '';
+								width: 0;
+								height: 0;
+								border-top: 6px solid #333333;
+								border-left: 5px solid transparent;
+								border-right: 5px solid transparent;
 							}
 						}
-						.user-employee{
-							.employee-info-item{
+						.user-grade-list{
+							position: absolute;
+							width: 130px;
+							top: 100%;
+							height: 0;
+							background: #eff3f6;
+							list-style: none;
+							border-left: 1px solid #e4e4e4;
+							border-right: 1px solid #e4e4e4;
+							overflow: hidden;
+							transition: all .2s ease;
+							cursor: pointer;
+							.user-grade-item{
+								height: 30px;
+								line-height: 30px;
+								font-size: 14px;
+								border-bottom: 1px solid #e4e4e4;
+								text-align: center;
+							}
+							&.active{
+								height: auto;
+							}
+						}
+					}
+					.user-enrollment-select{
+						display: none;
+						position: relative;
+						.user-basic-btn{
+							position: relative;
+							width: 130px;
+							height: 30px;
+							border: 1px solid #e4e4e4;
+							outline: none;
+							border-radius: 3px;
+							padding-left: 10px;
+							text-align: left;
+							font-size: 12px;
+							color: #333333;
+							cursor: pointer;
+							&:before{
 								position: absolute;
-								left: 210px;
-								// display: flex;
-								margin-top: 20px;
-								font-size: 0;
-								display: none;
-								.user-industry-select{
-									position: relative;
-									margin-right: 40px;
-									.user-industry-btn{
-										position: relative;
-										width: 130px;
-										height: 30px;
-										border: 1px solid #e4e4e4;
-										outline: none;
-										border-radius: 3px;
-										padding-left: 10px;
-										text-align: left;
-										font-size: 12px;
-										color: #333333;
-										&:before{
-											position: absolute;
-											transform: translateY(-50%);
-											top: 50%;
-											left: 105px;
-											content: '';
-											width: 20px;
-											height: 20px;
-											border-radius: 3px;
-											background: #e4e4e4;
-										}
-										&:after{
-											position: absolute;
-											top: 50%;
-											left: 110px;
-											transform: translateY(-50%);
-											content: '';
-											width: 0;
-											height: 0;
-											border-top: 6px solid #333333;
-											border-left: 5px solid transparent;
-											border-right: 5px solid transparent;
-										}
-									}
-									.user-industry-list{
-										position: absolute;
-										width: 130px;
-										top: 100%;
-										height: 0;
-										background: #eff3f6;
-										list-style: none;
-										border-left: 1px solid #e4e4e4;
-										border-right: 1px solid #e4e4e4;
-										overflow: hidden;
-										transition: all .2s ease;
-										.user-industry-item{
-											height: 30px;
-											line-height: 30px;
-											font-size: 14px;
-											border-bottom: 1px solid #e4e4e4;
-											text-align: center;
-										}
-										&.active{
-											height: auto;
-										}
-									}
-								}
-								.user-workingyear-select{
-									position: relative;
-									.user-workingyear-btn{
-										position: relative;
-										width: 130px;
-										height: 30px;
-										border: 1px solid #e4e4e4;
-										outline: none;
-										border-radius: 3px;
-										padding-left: 10px;
-										text-align: left;
-										font-size: 12px;
-										color: #333333;
-										&:before{
-											position: absolute;
-											transform: translateY(-50%);
-											top: 50%;
-											left: 105px;
-											content: '';
-											width: 20px;
-											height: 20px;
-											border-radius: 3px;
-											background: #e4e4e4;
-										}
-										&:after{
-											position: absolute;
-											top: 50%;
-											left: 110px;
-											transform: translateY(-50%);
-											content: '';
-											width: 0;
-											height: 0;
-											border-top: 6px solid #333333;
-											border-left: 5px solid transparent;
-											border-right: 5px solid transparent;
-										}								    
-									}
-									.user-workingyear-list{
-										position: absolute;
-										width: 130px;
-										top: 100%;
-										height: 0;
-										background: #eff3f6;
-										list-style: none;
-										border-left: 1px solid #e4e4e4;
-										border-right: 1px solid #e4e4e4;
-										overflow: hidden;
-										transition: all .2s ease;
-										.user-workingyear-item{
-											height: 30px;
-											line-height: 30px;
-											font-size: 14px;
-											border-bottom: 1px solid #e4e4e4;
-											text-align: center;
-										}
-										&.active{
-											height: auto;
-										}
-									}
-								}
-								&.active{
-									display: flex;
-								}
+								transform: translateY(-50%);
+								top: 50%;
+								left: 105px;
+								content: '';
+								width: 20px;
+								height: 20px;
+								border-radius: 3px;
+								background: #e4e4e4;
+							}
+							&:after{
+								position: absolute;
+								top: 50%;
+								left: 110px;
+								transform: translateY(-50%);
+								content: '';
+								width: 0;
+								height: 0;
+								border-top: 6px solid #333333;
+								border-left: 5px solid transparent;
+								border-right: 5px solid transparent;
+							}								    
+						}
+						.user-enrollment-list{
+							position: absolute;
+							width: 130px;
+							top: 100%;
+							height: 0;
+							background: #eff3f6;
+							list-style: none;
+							border-left: 1px solid #e4e4e4;
+							border-right: 1px solid #e4e4e4;
+							overflow: hidden;
+							transition: all .2s ease;
+							overflow-y: scroll;
+							overflow-x: hidden;
+							cursor: pointer;
+							&::-webkit-scrollbar{
+								width: 0 !important
+							}
+							.user-enrollment-item{
+								height: 30px;
+								line-height: 30px;
+								font-size: 14px;
+								border-bottom: 1px solid #e4e4e4;
+								text-align: center;
+							}
+							&.active{
+								height: 150px;
+							}
+						}
+					}
+					.user-industry-select{
+						display: none;
+						position: relative;
+						margin-right: 40px;
+						.user-basic-btn{
+							position: relative;
+							width: 130px;
+							height: 30px;
+							border: 1px solid #e4e4e4;
+							outline: none;
+							border-radius: 3px;
+							padding-left: 10px;
+							text-align: left;
+							font-size: 12px;
+							color: #333333;
+							cursor: pointer;
+							&:before{
+								position: absolute;
+								transform: translateY(-50%);
+								top: 50%;
+								left: 105px;
+								content: '';
+								width: 20px;
+								height: 20px;
+								border-radius: 3px;
+								background: #e4e4e4;
+							}
+							&:after{
+								position: absolute;
+								top: 50%;
+								left: 110px;
+								transform: translateY(-50%);
+								content: '';
+								width: 0;
+								height: 0;
+								border-top: 6px solid #333333;
+								border-left: 5px solid transparent;
+								border-right: 5px solid transparent;
+							}
+						}
+						.user-industry-list{
+							position: absolute;
+							width: 130px;
+							top: 100%;
+							height: 0;
+							background: #eff3f6;
+							list-style: none;
+							border-left: 1px solid #e4e4e4;
+							border-right: 1px solid #e4e4e4;
+							overflow: hidden;
+							transition: all .2s ease;
+							cursor: pointer;
+							.user-industry-item{
+								height: 30px;
+								line-height: 30px;
+								font-size: 14px;
+								border-bottom: 1px solid #e4e4e4;
+								text-align: center;
+							}
+							&.active{
+								height: auto;
+							}
+						}
+					}
+					.user-workingyear-select{
+						display: none;
+						position: relative;
+						.user-basic-btn{
+							position: relative;
+							width: 130px;
+							height: 30px;
+							border: 1px solid #e4e4e4;
+							outline: none;
+							border-radius: 3px;
+							padding-left: 10px;
+							text-align: left;
+							font-size: 12px;
+							color: #333333;
+							cursor: pointer;
+							&:before{
+								position: absolute;
+								transform: translateY(-50%);
+								top: 50%;
+								left: 105px;
+								content: '';
+								width: 20px;
+								height: 20px;
+								border-radius: 3px;
+								background: #e4e4e4;
+							}
+							&:after{
+								position: absolute;
+								top: 50%;
+								left: 110px;
+								transform: translateY(-50%);
+								content: '';
+								width: 0;
+								height: 0;
+								border-top: 6px solid #333333;
+								border-left: 5px solid transparent;
+								border-right: 5px solid transparent;
+							}								    
+						}
+						.user-workingyear-list{
+							position: absolute;
+							width: 130px;
+							top: 100%;
+							height: 0;
+							background: #eff3f6;
+							list-style: none;
+							border-left: 1px solid #e4e4e4;
+							border-right: 1px solid #e4e4e4;
+							overflow: hidden;
+							transition: all .2s ease;
+							cursor: pointer;
+							.user-workingyear-item{
+								height: 30px;
+								line-height: 30px;
+								font-size: 14px;
+								border-bottom: 1px solid #e4e4e4;
+								text-align: center;
+							}
+							&.active{
+								height: auto;
 							}
 						}
 					}
 				}
 			}
 		}
+
 		.check-box{
-			margin-top: 50px;
+			margin-top: 60px;
 			text-align: center;
 			.next-btn{
 				width: 160px;
@@ -681,13 +685,11 @@ body{
 				line-height: 40px;
 				text-align: center;
 				border: 1px solid #cccccc;
+				cursor: pointer;
 				&.active{
 					background: #35b558;
 					border: 1px solid #35b558;
 				}
-			}
-			&.active{
-				margin-top: 110px;
 			}
 		}
 	}
@@ -729,6 +731,7 @@ body{
 					color: #333333;
 					text-align: center;
 					margin-bottom: 20px;
+					cursor: pointer;
 					&:nth-child(n+4){
 						margin-bottom: 0;
 					}
@@ -764,6 +767,7 @@ body{
 				font-size: 15px;
 				border: 1px solid #35b558;
 				text-align: center;
+				cursor: pointer;
 			}
 			.type-next-btn{
 				width: 160px;
@@ -774,6 +778,7 @@ body{
 				font-size: 15px;
 				border: 1px solid #cccccc;
 				text-align: center;
+				cursor: pointer;
 				&.active{
 					background: #35b558;
 					border: 1px solid #35b558;
@@ -838,6 +843,7 @@ body{
 							border-radius: 3px;
 							color: #333333;
 							border: 1px solid #e4e4e4;
+							cursor: pointer;
 							&:hover{
 								border: 1px solid #bbb;
 							}
@@ -894,6 +900,7 @@ body{
 				font-size: 15px;
 				border: 1px solid #35b558;
 				text-align: center;
+				cursor: pointer;
 			}
 			.level-apply-btn{
 				width: 160px;
@@ -904,6 +911,7 @@ body{
 				font-size: 15px;
 				border: 1px solid #cccccc;
 				text-align: center;
+				cursor: pointer;
 				&.active{
 					background: #35b558;
 					border: 1px solid #35b558;
@@ -1025,18 +1033,19 @@ body{
 			text-align: center;
 			.binding-btn{
 				width: 160px;
-		    height: 40px;
-		    border-radius: 4px;
-		    font-size: 15px;
-		    color: #ffffff;
-		    background: #cccccc;
-		    border: 1px solid #cccccc;
-		    line-height: 40px;
-		    text-align: center;
-		    &.active{
-		    	background: #35b558;
+			    height: 40px;
+			    border-radius: 4px;
+			    font-size: 15px;
+			    color: #ffffff;
+			    background: #cccccc;
+			    border: 1px solid #cccccc;
+			    line-height: 40px;
+			    text-align: center;
+			    cursor: pointer;
+			    &.active{
+			    	background: #35b558;
 					border: 1px solid #35b558;
-		    }
+			    }
 			}
 		}
 	}
